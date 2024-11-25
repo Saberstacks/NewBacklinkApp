@@ -2,6 +2,7 @@ const axios = require('axios');
 
 module.exports = async (req, res) => {
   if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
     res.status(405).json({ error: 'Method Not Allowed' });
     return;
   }
@@ -18,7 +19,6 @@ module.exports = async (req, res) => {
     {
       target: target,
       limit: 10,
-      // Include other parameters if needed
     },
   ];
 
