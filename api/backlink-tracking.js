@@ -1,7 +1,6 @@
-const axios = require('axios');
-require('dotenv').config();
+import axios from 'axios';
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return;
@@ -47,4 +46,4 @@ module.exports = async (req, res) => {
     console.error('Error in Backlink Tracking:', errorData);
     res.status(500).json({ error: errorData.status_message || 'An error occurred' });
   }
-};
+}
