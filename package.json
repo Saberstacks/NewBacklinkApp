@@ -7,7 +7,7 @@
     "start": "vercel dev"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "dotenv": "^8.2.0"
-  }
+    "axios": "^1.4.0"
+  },
+  "type": "module"
 }
