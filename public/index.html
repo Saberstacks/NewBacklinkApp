@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Backlink Tracking</title>
+  <script src="/js/script.js" defer></script>
+  <style>
+    /* Basic styling */
+    #submit-button:disabled {
+      background-color: #ccc;
+    }
+    #result {
+      white-space: pre-wrap;
+      margin-top: 20px;
+    }
+    input {
+      display: block;
+      margin: 10px 0;
+    }
+    .error {
+      color: red;
+    }
+    .example {
+      color: gray;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Backlink Tracking</h1>
+  <p id="feature-description">Enter a domain to track its backlinks. <span class="example">e.g., example.com</span></p>
+  <input type="text" id="input-field" placeholder="Enter Domain" value="example.com" />
+  <button id="submit-button">Submit</button>
+  <div id="result"></div>
+</body>
+</html>
