@@ -1,6 +1,6 @@
-import axios from 'axios';
+const axios = require('axios');
 
-export default async function handler(req, res) {
+module.exports = async (req, res) => {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
     return;
@@ -46,4 +46,4 @@ export default async function handler(req, res) {
     console.error('Error in Backlink Tracking:', errorData);
     res.status(500).json({ error: errorData.status_message || 'An error occurred' });
   }
-}
+};
